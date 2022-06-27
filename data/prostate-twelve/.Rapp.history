@@ -1,0 +1,408 @@
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote=“")
+x = read.table("/Users/emelieberglund/Desktop/P1.2.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+dimx)
+dim(x9)
+dim(x)
+sum(x)
+path = "/Users/emelieberglund/Desktop/"
+files = list.files(path,"P.*.tsv")
+files
+paste(path,files,sep="")
+dim(files)
+dim(path,files,sep="")
+for (i in path){#
+  dim(files)
+qqqq
+q
+qq
+q
+qq
+q
+qqq
+q
+qq
+q
+qqqqqqq
+qqqqq
+for (i in path){#
+  dim(files)}
+for (i in path){#
+  dim(print(files))}
+for (i in files){#
+  dim(print(x))}
+x = read.table("/Users/emelieberglund/Desktop/P1.3.tsv", sep="\t", row.names=1, header=TRUE, quote=“")
+x = read.table("/Users/emelieberglund/Desktop/P1.2.tsv", sep="\t", row.names=1, header=TRUE, quote=“")
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+x = read.table("/Users/emelieberglund/Desktop/P1.3.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+dim(c)
+dim(x)
+sum(x)
+x = read.table("/Users/emelieberglund/Desktop/P2.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+dim(x)
+sum(x)
+x = read.table("/Users/emelieberglund/Desktop/P2.3.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P2.4.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+dim(x)
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P3.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P3.2.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P3.3.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P4.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+dim(x)
+sum(x)
+x = read.table("/Users/emelieberglund/Desktop/P4.2.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P4.3.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+x = read.table("/Users/emelieberglund/Desktop/P4.3.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+x = read.table("/Users/emelieberglund/Desktop/P4.2.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+sum(x)
+dim(x)
+install.packages("devtools")
+devtools::install_github("slowkow/ggrepel")
+library(dplyr)#
+  library(ggplot2)#
+  library(ggrepel)
+sig=ifelse(res$padj<0.00001, "FDR<0.00001", "Not Sig")#
+  res$sig = sig#
+  resDF = as.data.frame(res)
+p = ggplot(resDF, aes(log2FoldChange, -log10(pvalue))) +#
+    geom_point(aes(col=resDF$sig)) +#
+    scale_color_manual(values=c("red", "black"))#
+  p#
+  p+geom_text_repel(data=resDF[which(sig=="FDR<0.00001"),], label=resDF[which(sig=="FDR<0.00001"),7])
+setwd("~Desktop/stclust_v.0.1.0 2/stclust")#
+library(devtools)#
+library(roxygen2)#
+install.packages("stclust")
+setwd("~Desktop/stclust_v.0.1.0 2/stclust")#
+library(devtools)#
+library(roxygen2)#
+install("stclust")
+install("stclust_0.1.0.zip")
+biocLite("stclust")
+source("https://bioconductor.org/biocLite.R")
+biocLite("stclust")
+## Install necessary packages. You only have to install the packages the first time.#
+source("https://bioconductor.org/biocLite.R")#
+biocLite("DESeq")#
+biocLite("edgeR")#
+biocLite("org.Hs.eg.db")#
+biocLite("org.Mm.eg.db")#
+install.packages("Rtsne")#
+install.packages("rgl")#
+install.packages("fields")#
+install.packages("devtools")#
+install.packages("jackstraw")#
+install.packages("NbClust")#
+install.packages("fpc")#
+install.packages("cluster"")#
+install.packages("HSAUR")#
+library(devtools)#
+devtools::install_github("klutometis/roxygen")#
+library(roxygen2)#
+#
+## Set the directory, to where you unzip 'stclust' and install 'stclust', you only need to do this the first time or when updating to a new version.#
+setwd(""~/Desktop/stclust")#
+library(devtools)#
+library(roxygen2)#
+install.packages("stclust")
+source("https://bioconductor.org/biocLite.R")#
+biocLite("DESeq")#
+biocLite("edgeR")#
+biocLite("org.Hs.eg.db")#
+biocLite("org.Mm.eg.db")#
+install.packages("Rtsne")#
+install.packages("rgl")#
+install.packages("fields")#
+install.packages("devtools")#
+install.packages("jackstraw")#
+install.packages("NbClust")#
+install.packages("fpc")#
+install.packages("cluster"")#
+install.packages("HSAUR")#
+library(devtools)#
+devtools::install_github("klutometis/roxygen")#
+library(roxygen2)#
+#
+## Set the directory, to where you unzip 'stclust' and install 'stclust', you only need to do this the first time or when updating to a new version.#
+setwd(""~/Desktop/stclust")#
+library(devtools)#
+library(roxygen2)#
+install.packages("stclust")
+source("https://bioconductor.org/biocLite.R")
+setwd("~/Desktop/st-results_prostate/prostate-twelve/)
+c
+c c
+q
+-dz
+v.*ZD.vZ:v
+""
+2
+222
+2
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote=“")
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote=""")
+exit
+c
+exit
+c
+v ov zdov'zdo v
+''
+quit
+exit()
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+setwd("~/Desktop/st-results_prostate/prostate-twelve/)
+exit
+sg
+<sg
+setwd("~/Desktop/st-results_prostate/prostate-twelve/)
+öds
+setwd("~/Desktop/st-results_prostate/prostate-twelve/")
+x = read.table("/Users/emelieberglund/Desktop/P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+x = read.table("P1.1.tsv", sep="\t", row.names=1, header=TRUE, quote="")
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+median(x)
+m = for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+m
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+x -> for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(median(length(x[i][which(x[i]>0),])))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  m = length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  m = length(x[i][which(x[i]>0),])#
+}
+m
+for (i in 1:dim(x)[2]) {#
+  m = length(x[i][which(x[i]>0),])#
+}
+for (i in 1:dim(x)[2]) {#
+  m = length(x[i][which(x[i]>0),])#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),])) > m#
+}
+m
+sum(m)
+dim(m)
+for (i in 1:dim(x)[2]) > m {#
+  print(length(x[i][which(x[i]>0),])) #
+}
+for (i in 1:dim(x)[2] > m) {#
+  print(length(x[i][which(x[i]>0),])) #
+}
+for (i in 1:dim(x)[2] {#
+  print(length(x[i][which(x[i]>0),])) > m#
+}
+m
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+} > m
+m
+for (i in 1:dim(x)[2]) {#
+  median(colSums((length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  median(colSums(length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  median(colSums(length(x[i][which(x[i]>0),]))))#
+}
+for (i in 1:dim(x)[2]) {#
+  median(colSums(length(x[i][which(x[i]>0),])))))#
+}
+for (i in 1:dim(x)[2]) {#
+  median(colSums(length(x[i][which(x[i]>0),])))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),])), mediian#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),])), median#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),])), median#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),median]))}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))median}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),])), median#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),])), #
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))), #
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))) #
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+} ->¨¨
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+} <- median
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+x
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+median(x)
+m <- cbind(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+})
+m
+median(m)
+m <- for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+m
+m <- rbind(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+})
+m
+median(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+})
+median[2](for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+})
+median[(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}]
+median(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+})
+median(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}, 2)
+median(for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}, 2)
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(median(x[i][which(x[i]>0),]))#
+}
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+colNames(x)
+rowNames(x)
+rowMeans(x)
+y = rowMeans(x)
+sum(y)
+dim(y)
+for (i in 1:dim(x)[2]) {#
+  print(length(x[i][which(x[i]>0),]))#
+}
+y = colMeans(x)
+y
+dim(y)
+sum(y)
+y = rowMeans(x)
+y
+y[1]
+y = colMeans(x)
+y[1]
+y = colMeans(x, na.rm=FALSE)
+y[1]
+rowMeans(x)
+colSums(x)
+y = colSums(x)
+y
+sum(y)
+y/432
+sum(y)
+sum(y)/432
+x
+n = rowMeans(x)
+sum(n)
+sum(x)
+dim(x)
+16209/432
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))} median(x)
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+m <- for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+m
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))} > test.tex
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))} > test
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))} > n
+n
+sum(n)
+median(n)
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+x
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+my_vector <- vector("numeric", x)
+for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+dim(x)
+my_vector <- vector("numeric")
+my_vector
+my_vector <- sapply(x)
+my_vector <- sapply(my_vector, funcation(x))
+my_vector <- sapply(my_vector, function(x))
+my_vector <- sapply(my_vector, function(x), x)
+my_vector <- for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))}
+my_vector
+my_vector <- sapply(for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))})
+my_vector <- sapply(x, for (i in 1:dim(x)[2]) {  print(length(x[i][which(x[i]>0),]))})
+my_vector
+my_vector <- sapply(x, for (i in 1:dim(x)[2]) {  (length(x[i][which(x[i]>0),]))})
+for (i in 1:dim(x)[2]) {  (length(x[i][which(x[i]>0),]))}
+for (i in 1:dim(x)[2]) {  (length(x[i][which(x[i]>0),]))}
+list <- for (i in 1:dim(x)[2]) {  (length(x[i][which(x[i]>0),]))}
+list
+for (i in 1:dim(x)[2]) {  (length(x[i][which(x[i]>0),]))}
+results.1 <- data-frame(x)
+results.1 <- data.frame(x)
+results.1
+for (i in 1:dim(x)[2]) {  (length(x[i][which(x[i]>0),])) }
+m <- NULL
+for (i in 1:dim(x)[2]) {  m[i] <- (length(x[i][which(x[i]>0),])) }
+m
+median(m)
