@@ -110,7 +110,7 @@ markers %>% group_by(cluster) %>% top_n(n = 5, wt = avg_log2FC)
 
 
 ```{r clusterHeatmap, fig.height=8, fig.width=15}
-markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_log2FC) -> top10
+markers %>% group_by(cluster) %>% top_n(n = 5, wt = avg_log2FC) -> top10
 DoHeatmap(seurat.data, features = top10$gene) + NoLegend()
 ```
 

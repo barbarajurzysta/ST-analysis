@@ -8,19 +8,16 @@ library(Seurat)
 library(patchwork)
 
 data1.2 <- as.sparse(read.csv("prostate-twelve/P1.2.tsv", sep='\t'))
-data1.3 <- as.sparse(read.csv("prostate-twelve/P1.3.tsv", sep='\t'))
 data2.4 <- as.sparse(read.csv("prostate-twelve/P2.4.tsv", sep='\t'))
 data3.3 <- as.sparse(read.csv("prostate-twelve/P3.3.tsv", sep='\t'))
 colnames(data1.2) = paste0("1.2", colnames(data1.2))
-colnames(data1.3) = paste0("1.3", colnames(data1.3))
 colnames(data2.4) = paste0("2.4", colnames(data2.4))
 colnames(data3.3) = paste0("3.3", colnames(data3.3))
 
 seurat.data1.2 <- CreateSeuratObject(counts = data1.2, project = "Prostate1.2", min.cells = 2, min.features = 200)
-seurat.data1.3 <- CreateSeuratObject(counts = data1.3, project = "Prostate1.3", min.cells = 2, min.features = 200)
 seurat.data2.4 <- CreateSeuratObject(counts = data2.4, project = "Prostate2.4", min.cells = 2, min.features = 200)
 seurat.data3.3 <- CreateSeuratObject(counts = data3.3, project = "Prostate3.3", min.cells = 2, min.features = 200)
-d.list = c(seurat.data1.2, seurat.data1.3, seurat.data2.4, seurat.data3.3)
+d.list = c(seurat.data1.2, seurat.data2.4, seurat.data3.3)
 
 # normalize each section independently & find variable genes
 d.list <- lapply(X = d.list, FUN = function(x) {
