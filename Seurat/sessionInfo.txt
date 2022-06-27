@@ -1,0 +1,39 @@
+\begin{itemize}\raggedright
+  \item R version 4.2.0 (2022-04-22), \verb|x86_64-pc-linux-gnu|
+  \item Running under: \verb|Ubuntu 22.04 LTS|
+  \item Matrix products: default
+  \item BLAS:   \verb|/usr/lib/x86_64-linux-gnu/atlas/libblas.so.3.10.3|
+  \item LAPACK: \verb|/usr/lib/x86_64-linux-gnu/atlas/liblapack.so.3.10.3|
+  \item Base packages: base, datasets, graphics, grDevices, methods, stats,
+    utils
+  \item Other packages: dplyr~1.0.9, patchwork~1.1.1, Seurat~4.1.1,
+    SeuratObject~4.1.0, sp~1.5-0
+  \item Loaded via a namespace (and not attached): abind~1.4-5,
+    assertthat~0.2.1, cli~3.3.0, cluster~2.1.3, codetools~0.2-18,
+    colorspace~2.0-3, compiler~4.2.0, cowplot~1.1.1, crayon~1.5.1,
+    data.table~1.14.2, DBI~1.1.2, deldir~1.0-6, digest~0.6.29,
+    ellipsis~0.3.2, evaluate~0.15, fansi~1.0.3, farver~2.1.0,
+    fastmap~1.1.0, fitdistrplus~1.1-8, future~1.26.1, future.apply~1.9.0,
+    generics~0.1.2, ggplot2~3.3.6, ggrepel~0.9.1, ggridges~0.5.3,
+    globals~0.15.0, glue~1.6.2, goftest~1.2-3, grid~4.2.0, gridExtra~2.3,
+    gtable~0.3.0, htmltools~0.5.2, htmlwidgets~1.5.4, httpuv~1.6.5,
+    httr~1.4.3, ica~1.0-2, igraph~1.3.1, irlba~2.3.5, jsonlite~1.8.0,
+    KernSmooth~2.23-20, knitr~1.39, labeling~0.4.2, later~1.3.0,
+    lattice~0.20-45, lazyeval~0.2.2, leiden~0.4.2, lifecycle~1.0.1,
+    listenv~0.8.0, lmtest~0.9-40, magrittr~2.0.3, MASS~7.3-57,
+    Matrix~1.4-1, matrixStats~0.62.0, mgcv~1.8-40, mime~0.12,
+    miniUI~0.1.1.1, munsell~0.5.0, nlme~3.1-157, parallel~4.2.0,
+    parallelly~1.32.0, pbapply~1.5-0, pillar~1.7.0, pkgconfig~2.0.3,
+    plotly~4.10.0, plyr~1.8.7, png~0.1-7, polyclip~1.10-0,
+    progressr~0.10.1, promises~1.2.0.1, purrr~0.3.4, R6~2.5.1, RANN~2.6.1,
+    RColorBrewer~1.1-3, Rcpp~1.0.8.3, RcppAnnoy~0.0.19, reshape2~1.4.4,
+    reticulate~1.25, rgeos~0.5-9, rlang~1.0.2, rmarkdown~2.14, ROCR~1.0-11,
+    rpart~4.1.16, RSpectra~0.16-1, rstudioapi~0.13, Rtsne~0.16,
+    scales~1.2.0, scattermore~0.8, sctransform~0.3.3, shiny~1.7.1,
+    spatstat.core~2.4-4, spatstat.data~2.2-0, spatstat.geom~2.4-0,
+    spatstat.random~2.2-0, spatstat.sparse~2.1-1, spatstat.utils~2.3-1,
+    splines~4.2.0, stringi~1.7.6, stringr~1.4.0, survival~3.3-1,
+    tensor~1.5, tibble~3.1.7, tidyr~1.2.0, tidyselect~1.1.2, tools~4.2.0,
+    utf8~1.2.2, uwot~0.1.11, vctrs~0.4.1, viridisLite~0.4.0, withr~2.5.0,
+    xfun~0.31, xtable~1.8-4, yaml~2.3.5, zoo~1.8-10
+\end{itemize}

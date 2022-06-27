@@ -1,0 +1,120 @@
+---
+title: "Seurat analysis of the prostate cancer data"
+output: html_document
+---
+
+# Reading the data
+
+```{r init}
+library(dplyr)
+library(Seurat)
+library(patchwork)
+data1.2 <- as.sparse(read.csv("prostate-twelve/P1.2.tsv", sep='\t'))
+
+seurat.data <- CreateSeuratObject(counts = data1.2, project = "Prostate1.2", min.cells = 2, min.features = 200)
+
+short_names = sapply(strsplit(rownames(seurat.data), " "), `[`, 1)
+short_names = make.names(short_names, unique=TRUE)
+seurat.data[["RNA"]]@counts@Dimnames[[1]] = short_names
+seurat.data[["RNA"]]@data@Dimnames[[1]] = short_names
+rownames(seurat.data[["RNA"]]@meta.features) = short_names
+
+```
+# Visualization
+
+```{r visualization}
+VlnPlot(seurat.data, features = c("nFeature_RNA", "nCount_RNA"), ncol = 3)
+
+plot1 <- FeatureScatter(seurat.data, feature1 = "nCount_RNA", feature2 = "nFeature_RNA") 
+plot1
+sum(PercentageFeatureSet(seurat.data, pattern = "^MT-"))
+```
+It looks like there are no outliers in the data so I won't be filtering out anything else. There are also no mitochondrial genes in the data.
+
+# Normalizing the data
+
+```{r normalize}
+seurat.data <- NormalizeData(seurat.data, normalization.method = "LogNormalize", scale.factor = 1e4)
+```
+
+# Feature (gene) selection
+
+```{r var_features, fig.height=5, fig.width=11}
+seurat.data <- FindVariableFeatures(seurat.data, selection.method = 'vst', nfeatures = 2000)
+
+# Identify the 10 most highly variable genes
+top10 <- head(VariableFeatures(seurat.data), 10)
+top10
+# plot variable features with and without labels
+plot1 <- VariableFeaturePlot(seurat.data)
+plot1
+```
+
+# Scaling the data
+
+```{r scale,results='hide'}
+seurat.data <- ScaleData(seurat.data)
+```
+
+# Perform linear dimensional reduction
+
+```{r pca,results='hide'}
+seurat.data <- RunPCA(seurat.data, features = VariableFeatures(object = seurat.data))
+```
+
+```{r elbow_plot, fig.height=6, fig.width=10}
+ElbowPlot(seurat.data)
+```
+
+```{r pca_viz, message=TRUE}
+# Examine and visualize PCA results a few different ways
+print(seurat.data[['pca']], dims = 1:5, nfeatures = 5)
+VizDimLoadings(seurat.data, dims = 1:2, nfeatures = 20, reduction = 'pca')
+DimPlot(seurat.data, reduction = 'pca')
+```
+
+
+
+```{r multi-heatmap, fig.height=15, fig.width=9}
+DimHeatmap(seurat.data, dims = 1:9, cells = 406, balanced = TRUE)
+```
+
+
+
+# Clustering the spots
+
+```{r cluster, fig.height=5, fig.width=7}
+seurat.data <- FindNeighbors(seurat.data, dims = 1:10)
+seurat.data <- FindClusters(seurat.data, resolution = 0.7)
+
+# cluster IDs of the first 5 spots
+head(Idents(seurat.data), 5)
+```
+
+
+```{r umap, fig.height=5, fig.width=7}
+seurat.data <- RunUMAP(seurat.data, dims = 1:10)
+DimPlot(seurat.data, reduction = "umap")
+```
+
+
+
+# Finding differentially expressed features (cluster biomarkers)
+
+
+```{r markers1, fig.height=8, fig.width=15}
+# find markers for every cluster compared to all remaining cells, report only the positive ones
+markers <- FindAllMarkers(seurat.data, only.pos = TRUE, min.pct = 0.3)
+markers %>% group_by(cluster) %>% top_n(n = 5, wt = avg_log2FC)
+```
+
+
+```{r clusterHeatmap, fig.height=8, fig.width=15}
+markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_log2FC) -> top10
+DoHeatmap(seurat.data, features = top10$gene) + NoLegend()
+```
+
+```{r}
+write.csv(Idents(seurat.data), "seurat_clustering_1.2.csv", quote=F)
+```
+
